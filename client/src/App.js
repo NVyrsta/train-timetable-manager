@@ -10,6 +10,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Schedule />} />
+          <Route path="/train-timetable-manager" element={<Schedule />} />
           <Route path="/add" element={<AddTimeTable />} />
           <Route path="/update/:id" element={<UpdateTimeTable />} />
         </Routes>
