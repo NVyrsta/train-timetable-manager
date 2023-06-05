@@ -15,7 +15,9 @@ const Schedule = () => {
 
   const getAllRecords = async () => {
     try {
-      const res = await axios.get('http://localhost:4000/train-timetable');
+      const res = await axios.get(
+        'https://train-timetable-manager-nvyrsta.onrender.com/train-timetable'
+      );
       setTimetable(res.data);
       setFilteredTimetable(res.data);
     } catch (err) {
@@ -25,7 +27,9 @@ const Schedule = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/train-timetable/${id}`);
+      await axios.delete(
+        `https://train-timetable-manager-nvyrsta.onrender.com/train-timetable/${id}`
+      );
       getAllRecords();
     } catch (err) {
       console.log('handleDelete error:', err);

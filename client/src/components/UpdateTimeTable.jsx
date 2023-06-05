@@ -19,7 +19,7 @@ const UpdateTimeTable = () => {
     const getRecord = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:4000/train-timetable/${id}`
+          `https://train-timetable-manager-nvyrsta.onrender.com/train-timetable/${id}`
         );
         const record = res.data;
 
@@ -49,7 +49,10 @@ const UpdateTimeTable = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:4000/train-timetable/${id}`, timetable);
+      await axios.put(
+        `https://train-timetable-manager-nvyrsta.onrender.com/train-timetable/${id}`,
+        timetable
+      );
       navigate('/');
     } catch (err) {
       console.log('error on edit record page');

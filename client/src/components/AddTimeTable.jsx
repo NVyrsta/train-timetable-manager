@@ -23,7 +23,10 @@ const AddTimeTable = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:4000/train-timetable', timetable);
+      await axios.post(
+        'https://train-timetable-manager-nvyrsta.onrender.com/train-timetable',
+        timetable
+      );
       navigate('/');
     } catch (err) {
       console.log('error on add record page');
