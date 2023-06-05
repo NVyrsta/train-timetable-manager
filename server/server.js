@@ -9,15 +9,15 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database: 'schedule'
+  host: 'bfpndo7znxqayv5svjvf-mysql.services.clever-cloud.com',
+  user: 'uvfpzdv08dfuydrr',
+  password: 'OPIXuNpW3USXofmBJxbJ',
+  database: 'bfpndo7znxqayv5svjvf'
 });
 
 app.get('/train-timetable/:id', (req, res) => {
   const id = req.params.id;
-  const q = 'SELECT * FROM schedule.train_timetable WHERE id = ?';
+  const q = 'SELECT * FROM bfpndo7znxqayv5svjvf.train_timetable WHERE id = ?';
 
   db.query(q, [id], (err, data) => {
     if (err) {
@@ -29,7 +29,7 @@ app.get('/train-timetable/:id', (req, res) => {
 });
 
 app.get('/train-timetable', (req, res) => {
-  const q = 'SELECT * FROM schedule.train_timetable';
+  const q = 'SELECT * FROM bfpndo7znxqayv5svjvf.train_timetable';
 
   db.query(q, (err, data) => {
     if (err) {
@@ -42,7 +42,7 @@ app.get('/train-timetable', (req, res) => {
 
 app.post('/train-timetable', (req, res) => {
   const q =
-    'INSERT INTO schedule.train_timetable (`departure_point`, `departure_date`, `departure_time`, `arrival_point`, `arrival_date`, `arrival_time`) VALUES (?)';
+    'INSERT INTO bfpndo7znxqayv5svjvf.train_timetable (`departure_point`, `departure_date`, `departure_time`, `arrival_point`, `arrival_date`, `arrival_time`) VALUES (?)';
 
   const values = [
     req.body.departure_point,
@@ -64,7 +64,7 @@ app.post('/train-timetable', (req, res) => {
 
 app.delete('/train-timetable/:id', (req, res) => {
   const id = req.params.id;
-  const q = ' DELETE FROM schedule.train_timetable WHERE id = ? ';
+  const q = ' DELETE FROM bfpndo7znxqayv5svjvf.train_timetable WHERE id = ? ';
 
   db.query(q, [id], (err, data) => {
     if (err) return res.send(err);
@@ -75,7 +75,7 @@ app.delete('/train-timetable/:id', (req, res) => {
 app.put('/train-timetable/:id', (req, res) => {
   const id = req.params.id;
   const q =
-    'UPDATE schedule.train_timetable SET `departure_point` = ?, `departure_date` = ?, `departure_time` = ?, `arrival_point` = ?, `arrival_date` = ?, `arrival_time` = ? WHERE `id` = ?';
+    'UPDATE bfpndo7znxqayv5svjvf.train_timetable SET `departure_point` = ?, `departure_date` = ?, `departure_time` = ?, `arrival_point` = ?, `arrival_date` = ?, `arrival_time` = ? WHERE `id` = ?';
 
   const values = [
     req.body.departure_point,
