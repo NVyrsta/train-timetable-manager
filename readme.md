@@ -1,6 +1,6 @@
-# Project Name
+# Train Timetable Manager
 
-Project Name is a web application that allows users to perform CRUD operations (Create, Read, Update, Delete) on a database using a client-server architecture. It utilizes technologies such as Axios, Node.js, Express, MySQL, and Bootstrap.
+Train Timetable Manager is a web application that allows users to perform CRUD operations (Create, Read, Update, Delete) on a database using a client-server architecture. It utilizes technologies such as Axios, Node.js, Express, MySQL, and Bootstrap.
 
 ## Installation
 
