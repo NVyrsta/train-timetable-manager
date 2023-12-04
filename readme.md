@@ -52,10 +52,6 @@ If you would like to contribute to the project, please follow these steps:
 4. Commit and push your changes to your forked repository.
 5. Create a pull request describing your changes.
 
-## License
-
-[License Name] - Provide information about the license under which the project is distributed (e.g., MIT, Apache 2.0, etc.)
-
 ## Contact
 
-If you have any questions or suggestions, feel free to reach out to us at [contact email].
+If you have any questions or suggestions, feel free to reach out to us at natali.vyrsta@gmail.com
